@@ -9,9 +9,23 @@
 <button type="button"onclick="text()">Testing</button>
 
 <script>
+function NF(){
+  const notification =New Notification("This is an NF!!")
+}
  function text() {
-   alert("Hello,world");
- }
+
+ console.log(Notification.permission);
+   if(Notification.permission === "granted") {
+     NF();
+}
+ else if (Notification.permission !== "denied") {
+   Notification.requestPermission().then(permission=){
+     if (permission === "granted"){
+       NF();
+            }
+         })
+    }
+}
 </script>
 
 <div>Teachable Machine Audio Model </div>
