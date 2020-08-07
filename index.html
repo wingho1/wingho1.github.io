@@ -6,7 +6,7 @@
 <br>
 <br>
 
-<button type="button"onclick="text()"> Testing </button>
+<button type="button" onclick="test()"> Testing </button>
 
 <script>
 function NF(){
@@ -21,7 +21,7 @@ function NF(){
      NF();
 }
  else if (Notification.permission !== "denied") {
-   Notification.requestPermission().then(permission=){
+   Notification.requestPermission().then(permission => {
      if (permission === "granted"){
        //alert("granted");
        NF();
