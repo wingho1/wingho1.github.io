@@ -10,21 +10,24 @@
 
 <script>
 function NF(){
-  const notification =New Notification("This is an NF!!")
+  const notification =new Notification("This is an NF!!")
 }
- function text() 
+ function text() {
 
+ // granted,denied,default
  console.log(Notification.permission);
-   if(Notification.permission === "granted") {
+   if(Notification.permission === "granted"){
+     //alert("granted");
      NF();
 }
  else if (Notification.permission !== "denied") {
    Notification.requestPermission().then(permission=){
      if (permission === "granted"){
+       //alert("granted");
        NF();
-            }
-         })
-    }
+     }
+   })
+  }
 }
 </script>
 
